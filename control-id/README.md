@@ -69,11 +69,13 @@ da página em *HTML* e nlohmann::json (<https://github.com/nlohmann/json>)
     execução do programa, um código de sucesso de execução é retornado e o 
     programa finalizado.
 
-6. Abaixo, informações 
+6. Abaixo, exemplos de dados lidos e deserializados:
+
+```$ ./control-id_jsonp```
 
 <table>
 <tr>
-<th> Dados dos usuários *(JSON)* </th>
+<th> Dados dos usuários JSON </th>
 <th> Dados dos usuários deserializados </th>
 </tr>
 <tr>
@@ -499,6 +501,23 @@ company:
   name: "Hoeger LLC"
   catchPhrase: "Centralized empowering task-force"
   bs: "target end-to-end models"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 </td>
