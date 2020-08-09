@@ -69,7 +69,8 @@ da página em *HTML* e nlohmann::json (<https://github.com/nlohmann/json>)
     execução do programa, um código de sucesso de execução é retornado e o 
     programa finalizado.
 
-6. Abaixo, exemplos de dados lidos e deserializados:
+6. Abaixo, exemplos de dados lidos e deserializados (somente parte dos
+   dados foram inseridos como exemplo):
 
 ```$ ./control-id_jsonp```
 
