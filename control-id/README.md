@@ -185,8 +185,8 @@ company:
 
 <table>
 <tr>
-<th> Dados dos usuários JSON </th>
-<th> Dados dos usuários deserializados </th>
+<th> Posts dos usuários JSON </th>
+<th> Posts do usuário 10 deserializados </th>
 </tr>
 <tr>
 <td>
