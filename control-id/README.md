@@ -30,7 +30,8 @@ em HTML e nlohmann::json (https://github.com/nlohmann/json)
    GNU/Linux preferida (geralmente sob o nome de libcurl ou libcurl-dev)
 
 3. Compilação em linha de comando para testes iniciais:
-``g++ -std=c++14 -Wall -Wextra control-id_jsonp.cpp -lcurl -o control-id_jsonp``
+
+    ``g++ -std=c++14 -Wall -Wextra control-id_jsonp.cpp -lcurl -o control-id_jsonp``
 
 4. Para testes:
     1. ``$ ./control-id_jsonp`` para impressão dos dados dos usuários de forma 
@@ -40,6 +41,7 @@ em HTML e nlohmann::json (https://github.com/nlohmann/json)
        numérica (não negativo) como argumento da entrada padrão (num).
 
 5. Informações sobre o código fonte:
+
     Inicialmente, os dois endereços são descritos de forma estática: um referenciando 
     os usuários e o outro, referenciando os posts dos usuários. A biblioteca curl é
     então inicializada e conforme argumento passado ou não na entrada padrão,
