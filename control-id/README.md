@@ -229,7 +229,7 @@ company:
     recusandae ut sed sunt\nnostrum est odit 
     totam\nsit error sed sunt eveniet provident qui 
     nulla"
-  },
+  }
 ]
 ```
 
