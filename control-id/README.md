@@ -33,36 +33,35 @@ em HTML e nlohmann::json (https://github.com/nlohmann/json)
 ``g++ -std=c++14 -Wall -Wextra control-id_jsonp.cpp -lcurl -o control-id_jsonp``
 
 4. Para testes:
-``$ ./control-id_jsonp`` para impressão dos dados dos usuários de forma não 
-formatada na saída padrão.
-
-``$ ./control-id_jsonp <num>`` para impressão de todas as mensagens (título e 
-corpo da mensagem) do usuário de userId passado sob forma numérica (não negativo)
-como argumento da entrada padrão (num).
+    1. ``$ ./control-id_jsonp`` para impressão dos dados dos usuários de forma 
+       não formatada na saída padrão,
+    2. ``$ ./control-id_jsonp <num>`` para impressão de todas as mensagens 
+       (título e corpo da mensagem) do usuário de userId passado sob forma 
+       numérica (não negativo) como argumento da entrada padrão (num).
 
 5. Informações sobre o código fonte:
-Inicialmente, os dois endereços são descritos de forma estática: um referenciando 
-os usuários e o outro, referenciando os posts dos usuários. A biblioteca curl é
-então inicializada e conforme argumento passado ou não na entrada padrão,
-é informado o endereço do site a ser "baixado" (através da URL passada 
-como argumento da função). Na configuração seguinte, é realizado sob forma
-de função anônima (lambda) o tamanho correspondente a string da página lida,
-e então uma outra função é chamada para inserção dos dados lidos em um
-buffer do tipo string.
+    Inicialmente, os dois endereços são descritos de forma estática: um referenciando 
+    os usuários e o outro, referenciando os posts dos usuários. A biblioteca curl é
+    então inicializada e conforme argumento passado ou não na entrada padrão,
+    é informado o endereço do site a ser "baixado" (através da URL passada 
+    como argumento da função). Na configuração seguinte, é realizado sob forma
+    de função anônima (lambda) o tamanho correspondente a string da página lida,
+    e então uma outra função é chamada para inserção dos dados lidos em um
+    buffer do tipo string.
 
-A página HTML então é lida e os dados armazenados em uma string. Após isso,
-curl é finalizada através de uma função específica. Utilizando uma biblioteca
-nlohmann::json (https://github.com/nlohmann/json) que faz o parser de dados 
-em formato JSON (em outras palavras a deserialização), conforme opção da
-linha de comando passada quando na invocação para execução, os dados são
-então deserializados e exibidos na saída padrão. Para cada uma das
-opções de deserialização, foi montada uma estrutura para avaliação de
-excessão, de maneira que campos ausentes na estrutura do JSON lido não
-levasse a execução do programa ao término abruptamente. Ao contrário, a 
-verificação da inicialização correta da função curl é realizada e caso haja 
-problemas, o programa é abortado após exibição de uma mensagem de erro na
-saída padrão de erros e um código de falhas é retornado. Caso não haja 
-nenhuma anormalidade, ao término da execução do programa, um código de
-sucesso de execução é retornado e o programa finalizado.
+    A página HTML então é lida e os dados armazenados em uma string. Após isso,
+    curl é finalizada através de uma função específica. Utilizando uma biblioteca
+    nlohmann::json (https://github.com/nlohmann/json) que faz o parser de dados 
+    em formato JSON (em outras palavras a deserialização), conforme opção da
+    linha de comando passada quando na invocação para execução, os dados são
+    então deserializados e exibidos na saída padrão. Para cada uma das
+    opções de deserialização, foi montada uma estrutura para avaliação de
+    excessão, de maneira que campos ausentes na estrutura do JSON lido não
+    levasse a execução do programa ao término abruptamente. Ao contrário, a 
+    verificação da inicialização correta da função curl é realizada e caso haja 
+    problemas, o programa é abortado após exibição de uma mensagem de erro na
+    saída padrão de erros e um código de falhas é retornado. Caso não haja 
+    nenhuma anormalidade, ao término da execução do programa, um código de
+    sucesso de execução é retornado e o programa finalizado.
 
 
