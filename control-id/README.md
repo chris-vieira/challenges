@@ -32,7 +32,18 @@ da página em *HTML* e nlohmann::json (<https://github.com/nlohmann/json>)
 
 3. Compilação em linha de comando para testes iniciais:
 
-    ``g++ -std=c++14 -Wall -Wextra control-id_jsonp.cpp -lcurl -o control-id_jsonp``
+    ``$ g++ -std=c++14 -Wall -Wextra control-id_jsonp.cpp -lcurl -o control-id_jsonp``
+
+    Opcionalmente pode-se fazer o uso do *Makefile* bastando invocar no
+    diretório onde encontra-se o código fonte (*control-id_jsonp.cpp* e
+    *json.hpp*):
+
+    ``$ make``
+
+    Então, caso processo de compilação tenha sido executado com sucesso,
+    o arquivo executável: *control-id_jsonp* será gerado e disponível
+    para execução.
+
 
 4. Para testes:
     1. ``$ ./control-id_jsonp`` para impressão dos dados dos usuários de forma 
@@ -70,7 +81,9 @@ da página em *HTML* e nlohmann::json (<https://github.com/nlohmann/json>)
     programa finalizado.
 
 6. Abaixo, exemplos de dados lidos e deserializados (somente parte dos
-   dados foram inseridos como exemplo):
+   dados foram inseridos como exemplo -- os dados em *JSON* assim como as
+   saídas não estão completos, somente partes foram exibidas com o intuito
+   de exemplificação):
 
 ```$ ./control-id_jsonp```
 
