@@ -28,7 +28,7 @@ int main (int argc, char *argv[]) {
         });
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readbuff);
         (void)curl_easy_perform(curl);
-            curl_easy_cleanup(curl);
+        curl_easy_cleanup(curl);
 
         if (argc == 1) { // Displays user information in an unformatted (deserialized) way:
             try {
